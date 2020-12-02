@@ -60,7 +60,7 @@ int foobar(int foo, int bar){
 ---
  (source_file
    (function_definition
-     (function_declarator (type_specifier) (identifier) (type_specifier) (identifier) (type_specifier) (identifier))
+     (function_declarator (type_specifier) (identifier) (function_parameter_list (type_specifier) (identifier) (type_specifier) (identifier)))
        (compound_statement
          (statement_list
            (statement (return_start (return))
@@ -78,7 +78,7 @@ string MyName(string sFirst, string sLast = "Smith"){
 ---
  (source_file
    (function_definition
-     (function_declarator (type_specifier) (identifier) (type_specifier) (identifier) (type_specifier) (identifier) (string_const))
+     (function_declarator (type_specifier) (identifier) (function_parameter_list (type_specifier) (identifier) (type_specifier) (identifier) (string_const)))
        (compound_statement
          (statement_list
            (statement (return_start (return))
@@ -107,7 +107,7 @@ int something(float fNum){
     (function_declarator (type_specifier) (identifier)) (compound_statement))
   (comment)
   (function_definition
-    (function_declarator (type_specifier) (identifier) (type_specifier) (identifier))
+    (function_declarator (type_specifier) (identifier) (function_parameter_list (type_specifier) (identifier)))
       (compound_statement
         (statement_list
           (statement (return_start (return))
@@ -136,5 +136,29 @@ int nothing(){ // A comment here
         (comment))
 
 ==================
+Preprocessor directives
+==================
+
+#include "some_file"
+
+---
+(source_file
+  (preprocessor_directive (pre_include) (string_const)))
+
 
 ==================
+Built in constants
+==================
+
+object oInvalid = OBJECT_INVALID;
+object oSelf = OBJECT_SELF;
+
+int nTrue = TRUE;
+int nFalse = FALSE;
+
+---
+(source_file
+ (declaration (type_specifier) (identifier) (object_invalid_const))
+ (declaration (type_specifier) (identifier) (object_self_const))
+ (declaration (type_specifier) (identifier) (true_const))
+ (declaration (type_specifier) (identifier) (false_const)))

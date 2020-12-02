@@ -1,3 +1,7 @@
+; highlights.scm
+
+(preprocessor_directive) @preprocessor
+
 "struct" @keyword
 "if" @keyword
 "else" @keyword
@@ -11,11 +15,22 @@
 
 (comment) @comment
 
-(type_specifier) @type
+(type_specifier) @type.builtin
 
 (identifier) @identifier
 
-(number) @number
+(float) @number
+(integer) @number
+(hex) @number
+
+(string_const) @string
+
+"[" @punctuation.bracket
+"]" @punctuation.bracket
+"{" @punctuation.bracket
+"}" @punctuation.bracket
+"(" @punctuation.bracket
+")" @punctuation.bracket
 
 "=" @operator
 "*" @operator

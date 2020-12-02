@@ -28,6 +28,10 @@
           "named": true
         },
         {
+          "type": "false_const",
+          "named": true
+        },
+        {
           "type": "float",
           "named": true
         },
@@ -85,6 +89,10 @@
         },
         {
           "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "true_const",
           "named": true
         },
         {
@@ -142,25 +150,6 @@
     }
   },
   {
-    "type": "binary_operator",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "andand",
-          "named": true
-        },
-        {
-          "type": "oror",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "case_statement",
     "named": true,
     "fields": {},
@@ -170,33 +159,6 @@
       "types": [
         {
           "type": "constant_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "comparison_operator",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "eq",
-          "named": true
-        },
-        {
-          "type": "gteq",
-          "named": true
-        },
-        {
-          "type": "lteq",
-          "named": true
-        },
-        {
-          "type": "noteq",
           "named": true
         }
       ]
@@ -242,6 +204,10 @@
           "named": true
         },
         {
+          "type": "false_const",
+          "named": true
+        },
+        {
           "type": "float",
           "named": true
         },
@@ -299,6 +265,10 @@
         },
         {
           "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "true_const",
           "named": true
         },
         {
@@ -337,6 +307,10 @@
           "named": true
         },
         {
+          "type": "false_const",
+          "named": true
+        },
+        {
           "type": "float",
           "named": true
         },
@@ -394,6 +368,10 @@
         },
         {
           "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "true_const",
           "named": true
         },
         {
@@ -436,6 +414,10 @@
           "named": true
         },
         {
+          "type": "false_const",
+          "named": true
+        },
+        {
           "type": "float",
           "named": true
         },
@@ -493,6 +475,10 @@
         },
         {
           "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "true_const",
           "named": true
         },
         {
@@ -550,6 +536,48 @@
       "required": true,
       "types": [
         {
+          "type": "function_parameter_list",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "type_specifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_definition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "compound_statement",
+          "named": true
+        },
+        {
+          "type": "function_declarator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_parameter_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
           "type": "andand",
           "named": true
         },
@@ -567,6 +595,10 @@
         },
         {
           "type": "expression",
+          "named": true
+        },
+        {
+          "type": "false_const",
           "named": true
         },
         {
@@ -630,30 +662,15 @@
           "named": true
         },
         {
+          "type": "true_const",
+          "named": true
+        },
+        {
           "type": "type_specifier",
           "named": true
         },
         {
           "type": "usr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "function_definition",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "compound_statement",
-          "named": true
-        },
-        {
-          "type": "function_declarator",
           "named": true
         }
       ]
@@ -740,6 +757,25 @@
     }
   },
   {
+    "type": "preprocessor_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "pre_include",
+          "named": true
+        },
+        {
+          "type": "string_const",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "return_start",
     "named": true,
     "fields": {},
@@ -803,6 +839,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "preprocessor_directive",
           "named": true
         },
         {
@@ -1179,12 +1219,16 @@
     "named": false
   },
   {
-    "type": "float",
-    "named": false
+    "type": "false_const",
+    "named": true
   },
   {
     "type": "float",
     "named": true
+  },
+  {
+    "type": "float",
+    "named": false
   },
   {
     "type": "for",
@@ -1267,6 +1311,10 @@
     "named": true
   },
   {
+    "type": "pre_include",
+    "named": true
+  },
+  {
     "type": "return",
     "named": true
   },
@@ -1313,6 +1361,10 @@
   {
     "type": "talent",
     "named": false
+  },
+  {
+    "type": "true_const",
+    "named": true
   },
   {
     "type": "usr",

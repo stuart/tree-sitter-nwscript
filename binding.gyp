@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "tree_sitter_nwcript_binding",
+      "target_name": "tree_sitter_nwscript_binding",
       "include_dirs": [
         "<!(node -e \"require('nan')\")",
         "src"

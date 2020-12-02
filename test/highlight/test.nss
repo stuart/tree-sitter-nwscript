@@ -1,12 +1,12 @@
 void main(){};
-// <- type
+// <- type.builtin
 //    ^ identifier
 
 struct Quaternion{
 // <- keyword
 //       ^ identifier
   int i;
-// ^ type
+// ^ type.builtin
 //    ^ identifier
   int j;
   int k;
@@ -15,8 +15,11 @@ struct Quaternion{
 
 for(int i = 0; i < 12; i++){}
 //<- @keyword
-//  ^ type
+//  ^ type.builtin
 //      ^ identifier
 //        ^ operator
 //          ^ number
 //               ^ operator
+
+#include "my_inc_file"
+// ^ preprocessor

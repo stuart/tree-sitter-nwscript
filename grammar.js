@@ -10,7 +10,8 @@ module.exports = grammar({
     $.function_definition,
     $.declaration,
     $.struct_definition,
-    $.comment
+    $.comment,
+    $.preprocessor_directive
   ),
 
   // EXPRESSIONS
@@ -22,6 +23,8 @@ module.exports = grammar({
     $.string_const,
     $.object_self_const,
     $.object_invalid_const,
+    $.true_const,
+    $.false_const,
     seq('(', $.expression, ')'),
     '[]',
     '[', $.float, ']', //Vectors
@@ -263,11 +266,11 @@ module.exports = grammar({
 
  function_declarator: $ => choice(
    seq($._qualified_type_specifier, $.identifier, '(',
-   $._function_parameter_list, ')'),
+   $.function_parameter_list, ')'),
    seq($._qualified_type_specifier, $.identifier, '(', ')')
   ),
 
- _function_parameter_list: $ => repeat1(
+ function_parameter_list: $ => repeat1(
     seq($._function_parameter_declaration, optional(','))
  ),
 
@@ -277,7 +280,6 @@ module.exports = grammar({
  ),
 
  //Structures
-
  struct_definition: $ => seq(
    'struct',
    $.identifier,
@@ -298,6 +300,8 @@ module.exports = grammar({
  ),
 
  // Tokens
+ constant_identifier: $ => /[A-Z_]+/,
+
  identifier: $ => /[a-zA-Z_][a-zA-Z0-9_]*/,
 
  hex: $ => /0[xX][a-fA-F0-9]+/,
@@ -315,25 +319,6 @@ module.exports = grammar({
  // Operator tokens
  return: $ => 'return',
 
- operator: $ => choice(
-  $.binary_operator,
-  $.assignment_operator,
-  $.comparison_operator
- ),
-
- binary_operator: $ => choice(
-   '*',
-   '/',
-   '+',
-   '-',
-   '%',
-   '|',
-   '&',
-   '^',
-   $.oror,
-   $.andand
- ),
-
  assignment_operator: $ => choice(
    '=',
    $.addeq,
@@ -346,15 +331,6 @@ module.exports = grammar({
    $.sreq,
    $.usreq
   ),
-
- comparison_operator: $ => choice(
-   $.eq,
-   '>',
-   '<',
-   $.noteq,
-   $.lteq,
-   $.gteq,
- ),
 
  addeq: $ => '+=',
  plusplus: $ => '++',
@@ -392,9 +368,23 @@ module.exports = grammar({
  pre_warning: $ => '#warning',
  pre_error: $ => '#error',
 
- // Constants
+ preprocessor_directive: $ => choice(
+   $._preprocessor_include
+ ),
+
+ _preprocessor_include: $ => seq($.pre_include, $.string_const),
+
+ // Predefined Constants
+ predefined_constants: $ => choice(
+   $.object_self_const,
+   $.object_invalid_const,
+   $.true_const,
+   $.false_const
+ ),
+
  object_self_const: $ => 'OBJECT_SELF',
  object_invalid_const: $ => 'OBJECT_INVALID',
-
+ true_const: $ => 'TRUE',
+ false_const: $ => 'FALSE'
 },
 })

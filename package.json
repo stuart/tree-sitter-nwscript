@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-nwscript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NWNScript parser for syntax highlighting",
   "main": "index.js",
   "scripts": {
@@ -14,11 +14,13 @@
   "devDependencies": {
     "tree-sitter-cli": "^0.17.3"
   },
-
   "tree-sitter": [
     {
       "scope": "source.nss",
-      "file-types": [ "nss" ]
+      "file-types": [
+        "nss"
+      ],
+      "highlights": "queries/highlights.scm"
     }
   ]
 }
