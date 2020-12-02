@@ -1,0 +1,24 @@
+{
+  "name": "tree-sitter-nwscript",
+  "version": "1.0.0",
+  "description": "NWNScript parser for syntax highlighting",
+  "main": "index.js",
+  "scripts": {
+    "test": "tree-sitter test"
+  },
+  "author": "Stuart Coyle",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.14.2"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.17.3"
+  },
+
+  "tree-sitter": [
+    {
+      "scope": "source.nss",
+      "file-types": [ "nss" ]
+    }
+  ]
+}

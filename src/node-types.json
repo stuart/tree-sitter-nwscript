@@ -1,0 +1,1357 @@
+[
+  {
+    "type": "argument_expression_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "andand",
+          "named": true
+        },
+        {
+          "type": "argument_expression_list",
+          "named": true
+        },
+        {
+          "type": "assignment_operator",
+          "named": true
+        },
+        {
+          "type": "eq",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "gteq",
+          "named": true
+        },
+        {
+          "type": "hex",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "lteq",
+          "named": true
+        },
+        {
+          "type": "minusminus",
+          "named": true
+        },
+        {
+          "type": "noteq",
+          "named": true
+        },
+        {
+          "type": "object_invalid_const",
+          "named": true
+        },
+        {
+          "type": "object_self_const",
+          "named": true
+        },
+        {
+          "type": "oror",
+          "named": true
+        },
+        {
+          "type": "plusplus",
+          "named": true
+        },
+        {
+          "type": "sl",
+          "named": true
+        },
+        {
+          "type": "sr",
+          "named": true
+        },
+        {
+          "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "usr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assignment_operator",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "addeq",
+          "named": true
+        },
+        {
+          "type": "modeq",
+          "named": true
+        },
+        {
+          "type": "muleq",
+          "named": true
+        },
+        {
+          "type": "oreq",
+          "named": true
+        },
+        {
+          "type": "sleq",
+          "named": true
+        },
+        {
+          "type": "sreq",
+          "named": true
+        },
+        {
+          "type": "subeq",
+          "named": true
+        },
+        {
+          "type": "usreq",
+          "named": true
+        },
+        {
+          "type": "xoreq",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "binary_operator",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "andand",
+          "named": true
+        },
+        {
+          "type": "oror",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "case_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "constant_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comparison_operator",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "eq",
+          "named": true
+        },
+        {
+          "type": "gteq",
+          "named": true
+        },
+        {
+          "type": "lteq",
+          "named": true
+        },
+        {
+          "type": "noteq",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "compound_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "constant_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "andand",
+          "named": true
+        },
+        {
+          "type": "argument_expression_list",
+          "named": true
+        },
+        {
+          "type": "eq",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "gteq",
+          "named": true
+        },
+        {
+          "type": "hex",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "lteq",
+          "named": true
+        },
+        {
+          "type": "minusminus",
+          "named": true
+        },
+        {
+          "type": "noteq",
+          "named": true
+        },
+        {
+          "type": "object_invalid_const",
+          "named": true
+        },
+        {
+          "type": "object_self_const",
+          "named": true
+        },
+        {
+          "type": "oror",
+          "named": true
+        },
+        {
+          "type": "plusplus",
+          "named": true
+        },
+        {
+          "type": "sl",
+          "named": true
+        },
+        {
+          "type": "sr",
+          "named": true
+        },
+        {
+          "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "usr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "andand",
+          "named": true
+        },
+        {
+          "type": "argument_expression_list",
+          "named": true
+        },
+        {
+          "type": "assignment_operator",
+          "named": true
+        },
+        {
+          "type": "eq",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "gteq",
+          "named": true
+        },
+        {
+          "type": "hex",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "lteq",
+          "named": true
+        },
+        {
+          "type": "minusminus",
+          "named": true
+        },
+        {
+          "type": "noteq",
+          "named": true
+        },
+        {
+          "type": "object_invalid_const",
+          "named": true
+        },
+        {
+          "type": "object_self_const",
+          "named": true
+        },
+        {
+          "type": "oror",
+          "named": true
+        },
+        {
+          "type": "plusplus",
+          "named": true
+        },
+        {
+          "type": "sl",
+          "named": true
+        },
+        {
+          "type": "sr",
+          "named": true
+        },
+        {
+          "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "type_specifier",
+          "named": true
+        },
+        {
+          "type": "usr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "andand",
+          "named": true
+        },
+        {
+          "type": "argument_expression_list",
+          "named": true
+        },
+        {
+          "type": "assignment_operator",
+          "named": true
+        },
+        {
+          "type": "eq",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "gteq",
+          "named": true
+        },
+        {
+          "type": "hex",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "lteq",
+          "named": true
+        },
+        {
+          "type": "minusminus",
+          "named": true
+        },
+        {
+          "type": "noteq",
+          "named": true
+        },
+        {
+          "type": "object_invalid_const",
+          "named": true
+        },
+        {
+          "type": "object_self_const",
+          "named": true
+        },
+        {
+          "type": "oror",
+          "named": true
+        },
+        {
+          "type": "plusplus",
+          "named": true
+        },
+        {
+          "type": "sl",
+          "named": true
+        },
+        {
+          "type": "sr",
+          "named": true
+        },
+        {
+          "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "usr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_start",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "for_start_start",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_start_start",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "function_declarator",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "andand",
+          "named": true
+        },
+        {
+          "type": "argument_expression_list",
+          "named": true
+        },
+        {
+          "type": "assignment_operator",
+          "named": true
+        },
+        {
+          "type": "eq",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "gteq",
+          "named": true
+        },
+        {
+          "type": "hex",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "lteq",
+          "named": true
+        },
+        {
+          "type": "minusminus",
+          "named": true
+        },
+        {
+          "type": "noteq",
+          "named": true
+        },
+        {
+          "type": "object_invalid_const",
+          "named": true
+        },
+        {
+          "type": "object_self_const",
+          "named": true
+        },
+        {
+          "type": "oror",
+          "named": true
+        },
+        {
+          "type": "plusplus",
+          "named": true
+        },
+        {
+          "type": "sl",
+          "named": true
+        },
+        {
+          "type": "sr",
+          "named": true
+        },
+        {
+          "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "type_specifier",
+          "named": true
+        },
+        {
+          "type": "usr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_definition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "compound_statement",
+          "named": true
+        },
+        {
+          "type": "function_declarator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_else_start",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "if_start",
+          "named": true
+        },
+        {
+          "type": "statement_blank_error",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_start",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "iteration_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "do_start",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "for_start",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "while_start",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "labelled_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "case_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "return_start",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "return",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "selection_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "if_else_start",
+          "named": true
+        },
+        {
+          "type": "if_start",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "statement_blank_error",
+          "named": true
+        },
+        {
+          "type": "switch_start",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "declaration",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "struct_definition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "compound_statement",
+          "named": true
+        },
+        {
+          "type": "declaration",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "expression_statement",
+          "named": true
+        },
+        {
+          "type": "iteration_statement",
+          "named": true
+        },
+        {
+          "type": "labelled_statement",
+          "named": true
+        },
+        {
+          "type": "return_start",
+          "named": true
+        },
+        {
+          "type": "selection_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement_blank_error",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "compound_statement",
+          "named": true
+        },
+        {
+          "type": "declaration",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "expression_statement",
+          "named": true
+        },
+        {
+          "type": "iteration_statement",
+          "named": true
+        },
+        {
+          "type": "labelled_statement",
+          "named": true
+        },
+        {
+          "type": "return_start",
+          "named": true
+        },
+        {
+          "type": "selection_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "struct_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "struct_declarator_list",
+          "named": true
+        },
+        {
+          "type": "type_specifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "struct_declaration_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "struct_declaration",
+          "named": true
+        },
+        {
+          "type": "struct_declaration_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "struct_declarator_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "struct_declarator_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "struct_definition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "struct_declaration_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "switch_start",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_specifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "while_start",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "%",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "[]",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "^",
+    "named": false
+  },
+  {
+    "type": "addeq",
+    "named": true
+  },
+  {
+    "type": "andand",
+    "named": true
+  },
+  {
+    "type": "break",
+    "named": false
+  },
+  {
+    "type": "case",
+    "named": false
+  },
+  {
+    "type": "command",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "const",
+    "named": false
+  },
+  {
+    "type": "continue",
+    "named": false
+  },
+  {
+    "type": "default",
+    "named": false
+  },
+  {
+    "type": "do_start",
+    "named": true
+  },
+  {
+    "type": "effect",
+    "named": false
+  },
+  {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "eq",
+    "named": true
+  },
+  {
+    "type": "event",
+    "named": false
+  },
+  {
+    "type": "float",
+    "named": false
+  },
+  {
+    "type": "float",
+    "named": true
+  },
+  {
+    "type": "for",
+    "named": false
+  },
+  {
+    "type": "gteq",
+    "named": true
+  },
+  {
+    "type": "hex",
+    "named": true
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "int",
+    "named": false
+  },
+  {
+    "type": "integer",
+    "named": true
+  },
+  {
+    "type": "itemproperty",
+    "named": false
+  },
+  {
+    "type": "location",
+    "named": false
+  },
+  {
+    "type": "lteq",
+    "named": true
+  },
+  {
+    "type": "minusminus",
+    "named": true
+  },
+  {
+    "type": "modeq",
+    "named": true
+  },
+  {
+    "type": "muleq",
+    "named": true
+  },
+  {
+    "type": "noteq",
+    "named": true
+  },
+  {
+    "type": "object",
+    "named": false
+  },
+  {
+    "type": "object_invalid_const",
+    "named": true
+  },
+  {
+    "type": "object_self_const",
+    "named": true
+  },
+  {
+    "type": "oreq",
+    "named": true
+  },
+  {
+    "type": "oror",
+    "named": true
+  },
+  {
+    "type": "plusplus",
+    "named": true
+  },
+  {
+    "type": "return",
+    "named": true
+  },
+  {
+    "type": "sl",
+    "named": true
+  },
+  {
+    "type": "sleq",
+    "named": true
+  },
+  {
+    "type": "sqlquery",
+    "named": false
+  },
+  {
+    "type": "sr",
+    "named": true
+  },
+  {
+    "type": "sreq",
+    "named": true
+  },
+  {
+    "type": "string",
+    "named": false
+  },
+  {
+    "type": "string_const",
+    "named": true
+  },
+  {
+    "type": "struct",
+    "named": false
+  },
+  {
+    "type": "subeq",
+    "named": true
+  },
+  {
+    "type": "switch",
+    "named": false
+  },
+  {
+    "type": "talent",
+    "named": false
+  },
+  {
+    "type": "usr",
+    "named": true
+  },
+  {
+    "type": "usreq",
+    "named": true
+  },
+  {
+    "type": "vector",
+    "named": false
+  },
+  {
+    "type": "void",
+    "named": false
+  },
+  {
+    "type": "while",
+    "named": false
+  },
+  {
+    "type": "xoreq",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
+    "named": false
+  }
+]

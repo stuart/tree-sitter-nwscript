@@ -1,0 +1,140 @@
+==================
+Return statements
+==================
+
+int x() {
+  return 1;
+}
+
+---
+ (source_file
+    (function_definition
+       (function_declarator (type_specifier) (identifier))
+          (compound_statement
+            (statement_list
+              (statement (return_start (return)) (expression (integer)))))))
+
+==================
+Empty function
+==================
+
+void main(){
+}
+
+---
+ (source_file
+   (function_definition
+     (function_declarator (type_specifier) (identifier))
+       (compound_statement)))
+
+==================
+Global declaration
+==================
+
+const string sName = "String";
+const int nCount;
+const float fVar = 3.1415;
+int b;
+
+void main(){
+
+}
+---
+ (source_file
+   (declaration (type_specifier) (identifier) (string_const))
+   (declaration (type_specifier) (identifier))
+   (declaration (type_specifier) (identifier) (float))
+   (declaration (type_specifier) (identifier))
+   (function_definition
+     (function_declarator (type_specifier) (identifier))
+       (compound_statement)))
+
+==================
+Function Parameters
+==================
+
+int foobar(int foo, int bar){
+  return(foo + bar);
+}
+
+---
+ (source_file
+   (function_definition
+     (function_declarator (type_specifier) (identifier) (type_specifier) (identifier) (type_specifier) (identifier))
+       (compound_statement
+         (statement_list
+           (statement (return_start (return))
+             (expression
+               (expression (identifier) (identifier))))))))
+
+==================
+Parameters with default values
+==================
+
+string MyName(string sFirst, string sLast = "Smith"){
+  return(sFirst + sLast);
+}
+
+---
+ (source_file
+   (function_definition
+     (function_declarator (type_specifier) (identifier) (type_specifier) (identifier) (type_specifier) (identifier) (string_const))
+       (compound_statement
+         (statement_list
+           (statement (return_start (return))
+             (expression (expression (identifier) (identifier))))))))
+
+==================
+Comments
+==================
+
+// This function does nothing
+void nothing(){
+
+}
+
+/*
+This function does something
+*/
+int something(float fNum){
+  return(fNum * 3.0);
+}
+
+---
+(source_file
+  (comment)
+  (function_definition
+    (function_declarator (type_specifier) (identifier)) (compound_statement))
+  (comment)
+  (function_definition
+    (function_declarator (type_specifier) (identifier) (type_specifier) (identifier))
+      (compound_statement
+        (statement_list
+          (statement (return_start (return))
+            (expression (expression (identifier) (float))))))))
+
+==================
+Comments in other places
+==================
+
+// This function does nothing
+int nothing(){ // A comment here
+  /* Comment in a function */
+   return(0);
+} // Comment after
+---
+  (source_file
+    (comment)
+    (function_definition
+      (function_declarator (type_specifier) (identifier))
+      (compound_statement
+        (statement_list
+        (statement (comment))
+        (statement (comment))
+        (statement (return_start (return))
+        (expression (expression (integer)))))))
+        (comment))
+
+==================
+
+==================
