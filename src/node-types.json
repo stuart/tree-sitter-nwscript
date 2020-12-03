@@ -12,10 +12,6 @@
           "named": true
         },
         {
-          "type": "argument_expression_list",
-          "named": true
-        },
-        {
           "type": "assignment_operator",
           "named": true
         },
@@ -33,6 +29,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -192,10 +192,6 @@
           "named": true
         },
         {
-          "type": "argument_expression_list",
-          "named": true
-        },
-        {
           "type": "eq",
           "named": true
         },
@@ -209,6 +205,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -291,10 +291,6 @@
           "named": true
         },
         {
-          "type": "argument_expression_list",
-          "named": true
-        },
-        {
           "type": "assignment_operator",
           "named": true
         },
@@ -312,6 +308,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -398,10 +398,6 @@
           "named": true
         },
         {
-          "type": "argument_expression_list",
-          "named": true
-        },
-        {
           "type": "assignment_operator",
           "named": true
         },
@@ -419,6 +415,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -528,6 +528,32 @@
     "fields": {}
   },
   {
+    "type": "function_call",
+    "named": true,
+    "fields": {
+      "function": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "argument_expression_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "function_declarator",
     "named": true,
     "fields": {},
@@ -582,10 +608,6 @@
           "named": true
         },
         {
-          "type": "argument_expression_list",
-          "named": true
-        },
-        {
           "type": "assignment_operator",
           "named": true
         },
@@ -603,6 +625,10 @@
         },
         {
           "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
           "named": true
         },
         {
@@ -765,11 +791,51 @@
       "required": true,
       "types": [
         {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "false_const",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "hex",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "object_invalid_const",
+          "named": true
+        },
+        {
+          "type": "object_self_const",
+          "named": true
+        },
+        {
+          "type": "pre_define",
+          "named": true
+        },
+        {
           "type": "pre_include",
           "named": true
         },
         {
           "type": "string_const",
+          "named": true
+        },
+        {
+          "type": "true_const",
           "named": true
         }
       ]
@@ -1163,6 +1229,10 @@
     "named": false
   },
   {
+    "type": "action",
+    "named": false
+  },
+  {
     "type": "addeq",
     "named": true
   },
@@ -1224,11 +1294,11 @@
   },
   {
     "type": "float",
-    "named": true
+    "named": false
   },
   {
     "type": "float",
-    "named": false
+    "named": true
   },
   {
     "type": "for",
@@ -1308,6 +1378,10 @@
   },
   {
     "type": "plusplus",
+    "named": true
+  },
+  {
+    "type": "pre_define",
     "named": true
   },
   {

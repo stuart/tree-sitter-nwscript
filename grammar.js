@@ -1,12 +1,12 @@
 module.exports = grammar({
 	name: "nwscript",
-
  word: $ => $.identifier,
 
 	rules: {
   source_file: $ => repeat($._external_declaration),
 
   _external_declaration: $ => choice(
+    $.function_prototype,
     $.function_definition,
     $.declaration,
     $.struct_definition,
@@ -34,16 +34,16 @@ module.exports = grammar({
 
   _postfix_expression: $ => prec(1, choice (
     $._primary_expression,
-    seq($.identifier, '(', optional($.argument_expression_list), ')'),
+    $.function_call,
     seq($._postfix_expression, '.', $.identifier),
     seq($._postfix_expression, $.plusplus),
     seq($._postfix_expression, $.minusminus)
   )),
 
-  argument_expression_list: $ => choice(
-    $._assignment_expression,
-    seq($.argument_expression_list, ',', $._assignment_expression)
-  ),
+  function_call: $ => prec(3, seq(field('function', $.identifier), '(', optional($.argument_expression_list), ')')),
+
+  argument_expression_list: $ =>
+   repeat1(seq($._assignment_expression , optional(','))),
 
   _unary_expression: $ => choice(
     $._postfix_expression,
@@ -160,6 +160,8 @@ module.exports = grammar({
      'talent',
      'vector',
      'void',
+     'action',
+     'talent',
      seq('struct', $.identifier)
     ),
 
@@ -369,10 +371,12 @@ module.exports = grammar({
  pre_error: $ => '#error',
 
  preprocessor_directive: $ => choice(
-   $._preprocessor_include
+   $._preprocessor_include,
+   $._preprocessor_define
  ),
 
  _preprocessor_include: $ => seq($.pre_include, $.string_const),
+ _preprocessor_define: $ => seq($.pre_define, $.identifier, $._primary_expression),
 
  // Predefined Constants
  predefined_constants: $ => choice(
