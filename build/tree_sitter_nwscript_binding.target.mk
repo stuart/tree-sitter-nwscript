@@ -12,6 +12,7 @@ DEFS_Debug := \
 	'-D_DARWIN_USE_64_BIT_INODE=1' \
 	'-D_LARGEFILE_SOURCE' \
 	'-D_FILE_OFFSET_BITS=64' \
+	'-DOPENSSL_NO_PINSHARED' \
 	'-DOPENSSL_THREADS' \
 	'-DBUILDING_NODE_EXTENSION' \
 	'-DDEBUG' \
@@ -22,7 +23,7 @@ DEFS_Debug := \
 CFLAGS_Debug := \
 	-O0 \
 	-gdwarf-2 \
-	-mmacosx-version-min=10.10 \
+	-mmacosx-version-min=10.13 \
 	-arch x86_64 \
 	-Wall \
 	-Wendif-labels \
@@ -48,13 +49,13 @@ CFLAGS_OBJC_Debug :=
 CFLAGS_OBJCC_Debug :=
 
 INCS_Debug := \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/include/node \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/src \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/openssl/config \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/openssl/openssl/include \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/uv/include \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/zlib \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/v8/include \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/include/node \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/src \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/openssl/config \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/openssl/openssl/include \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/uv/include \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/zlib \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/v8/include \
 	-I$(srcdir)/node_modules/nan \
 	-I$(srcdir)/src
 
@@ -68,14 +69,15 @@ DEFS_Release := \
 	'-D_DARWIN_USE_64_BIT_INODE=1' \
 	'-D_LARGEFILE_SOURCE' \
 	'-D_FILE_OFFSET_BITS=64' \
+	'-DOPENSSL_NO_PINSHARED' \
 	'-DOPENSSL_THREADS' \
 	'-DBUILDING_NODE_EXTENSION'
 
 # Flags passed to all source files.
 CFLAGS_Release := \
-	-Os \
+	-O3 \
 	-gdwarf-2 \
-	-mmacosx-version-min=10.10 \
+	-mmacosx-version-min=10.13 \
 	-arch x86_64 \
 	-Wall \
 	-Wendif-labels \
@@ -101,13 +103,13 @@ CFLAGS_OBJC_Release :=
 CFLAGS_OBJCC_Release :=
 
 INCS_Release := \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/include/node \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/src \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/openssl/config \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/openssl/openssl/include \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/uv/include \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/zlib \
-	-I/Users/stuart/.atom/.node-gyp/Library/Caches/node-gyp/6.1.12/deps/v8/include \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/include/node \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/src \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/openssl/config \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/openssl/openssl/include \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/uv/include \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/zlib \
+	-I/Users/stuart/Library/Caches/node-gyp/15.2.1/deps/v8/include \
 	-I$(srcdir)/node_modules/nan \
 	-I$(srcdir)/src
 
@@ -128,25 +130,25 @@ $(OBJS): GYP_OBJCXXFLAGS := $(DEFS_$(BUILDTYPE)) $(INCS_$(BUILDTYPE))  $(CFLAGS_
 
 # Suffix rules, putting all outputs into $(obj).
 
-$(obj).$(TOOLSET)/$(TARGET)/%.o: $(srcdir)/%.cc FORCE_DO_CMD
-	@$(call do_cmd,cxx,1)
-
 $(obj).$(TOOLSET)/$(TARGET)/%.o: $(srcdir)/%.c FORCE_DO_CMD
 	@$(call do_cmd,cc,1)
 
-# Try building from generated source, too.
-
-$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj).$(TOOLSET)/%.cc FORCE_DO_CMD
+$(obj).$(TOOLSET)/$(TARGET)/%.o: $(srcdir)/%.cc FORCE_DO_CMD
 	@$(call do_cmd,cxx,1)
+
+# Try building from generated source, too.
 
 $(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj).$(TOOLSET)/%.c FORCE_DO_CMD
 	@$(call do_cmd,cc,1)
 
-$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj)/%.cc FORCE_DO_CMD
+$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj).$(TOOLSET)/%.cc FORCE_DO_CMD
 	@$(call do_cmd,cxx,1)
 
 $(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj)/%.c FORCE_DO_CMD
 	@$(call do_cmd,cc,1)
+
+$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj)/%.cc FORCE_DO_CMD
+	@$(call do_cmd,cxx,1)
 
 # End of this set of suffix rules
 ### Rules for final target.
@@ -154,7 +156,7 @@ LDFLAGS_Debug := \
 	-undefined dynamic_lookup \
 	-Wl,-no_pie \
 	-Wl,-search_paths_first \
-	-mmacosx-version-min=10.10 \
+	-mmacosx-version-min=10.13 \
 	-arch x86_64 \
 	-L$(builddir) \
 	-stdlib=libc++
@@ -168,7 +170,7 @@ LDFLAGS_Release := \
 	-undefined dynamic_lookup \
 	-Wl,-no_pie \
 	-Wl,-search_paths_first \
-	-mmacosx-version-min=10.10 \
+	-mmacosx-version-min=10.13 \
 	-arch x86_64 \
 	-L$(builddir) \
 	-stdlib=libc++
