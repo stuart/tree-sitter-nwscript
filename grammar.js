@@ -26,11 +26,15 @@ module.exports = grammar({
     $.true_const,
     $.false_const,
     seq('(', $.expression, ')'),
-    '[]',
-    '[', $.float, ']', //Vectors
-    '[',  $.float,  $.float, ']',
-    '[',  $.float,  $.float, $.float, ']',
+    $.vector
   ),
+
+  vector: $ => choice(
+   '[]',
+   seq('[', $.float, ']'),
+   seq('[',  $.float, ',',  $.float, ']'),
+   seq('[',  $.float, ',', $.float, ',', $.float, ']')
+   ),
 
   _postfix_expression: $ => prec(1, choice (
     $._primary_expression,

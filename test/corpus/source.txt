@@ -210,10 +210,22 @@ void PrintObject(object oObject);
 Action Type
 =================
 
-
-
 void AssignCommand(object oActionSubject, action aActionToAssign);
 
 ---
 
  (source_file (function_prototype (function_declarator (type_specifier) (identifier) (function_parameter_list (type_specifier) (identifier) (type_specifier) (identifier)))))
+
+=================
+Vectors
+=================
+
+vector a = [0.0];
+vector b = [1.0, 0.0];
+vector c = [1.0, 1.0, 0.0];
+---
+
+  (source_file
+    (declaration (type_specifier) (identifier) (vector (float)))
+    (declaration (type_specifier) (identifier) (vector (float) (float)))
+    (declaration (type_specifier) (identifier) (vector (float) (float) (float))))
