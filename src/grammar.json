@@ -14,6 +14,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "function_prototype"
+        },
+        {
+          "type": "SYMBOL",
           "name": "function_definition"
         },
         {
@@ -1692,7 +1696,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "function_definition"
+          "name": "function_declarator"
         },
         {
           "type": "STRING",

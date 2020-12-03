@@ -264,7 +264,7 @@ module.exports = grammar({
  // Function definition
  function_definition: $ => seq($.function_declarator, $.compound_statement),
 
- function_prototype: $ => seq($.function_definition, ';'),
+ function_prototype: $ => seq($.function_declarator, ';'),
 
  function_declarator: $ => choice(
    seq($._qualified_type_specifier, $.identifier, '(',
