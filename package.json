@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-nwscript",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NWNScript parser for syntax highlighting",
   "main": "index.js",
   "scripts": {
