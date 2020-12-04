@@ -1,3 +1,4 @@
+
 module.exports = grammar({
 	name: "nwscript",
  word: $ => $.identifier,
@@ -20,13 +21,13 @@ module.exports = grammar({
     $.float,
     $.integer,
     $.hex,
-    $.string_const,
     $.object_self_const,
     $.object_invalid_const,
     $.true_const,
     $.false_const,
     seq('(', $.expression, ')'),
-    $.vector
+    $.vector,
+    $.string_const,
   ),
 
   vector: $ => choice(
@@ -44,7 +45,7 @@ module.exports = grammar({
     seq($._postfix_expression, $.minusminus)
   )),
 
-  function_call: $ => prec(3, seq(field('function', $.identifier), '(', optional($.argument_expression_list), ')')),
+  function_call: $ => prec(1, seq(field('function', $.identifier), '(', optional($.argument_expression_list), ')')),
 
   argument_expression_list: $ =>
    repeat1(seq($._assignment_expression , optional(','))),
@@ -320,7 +321,7 @@ module.exports = grammar({
   $.float
  ),
 
- string_const: $ => /".*"/,
+ string_const: $ => seq('"', /[^"]*/, '"' ),
 
  // Operator tokens
  return: $ => 'return',
@@ -395,4 +396,5 @@ module.exports = grammar({
  true_const: $ => 'TRUE',
  false_const: $ => 'FALSE'
 },
+
 })

@@ -1067,6 +1067,11 @@
     }
   },
   {
+    "type": "string_const",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "struct_declaration",
     "named": true,
     "fields": {},
@@ -1204,6 +1209,10 @@
   },
   {
     "type": "!",
+    "named": false
+  },
+  {
+    "type": "\"",
     "named": false
   },
   {
@@ -1473,10 +1482,6 @@
   {
     "type": "string",
     "named": false
-  },
-  {
-    "type": "string_const",
-    "named": true
   },
   {
     "type": "struct",

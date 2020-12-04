@@ -108,6 +108,28 @@ void main(){
 
 
 ==================
+More function calls
+==================
+
+void main()
+{
+   SetLocalString("FROM_CURRENCY", "goblin");
+}
+
+---
+ (source_file
+   (function_definition
+     (function_declarator (type_specifier) (identifier))
+       (compound_statement
+         (statement_list
+           (statement (expression_statement
+             (expression
+               (function_call (identifier)
+                 (argument_expression_list
+                   (string_const) (string_const))))))))))
+
+
+==================
 Comments
 ==================
 
@@ -229,3 +251,8 @@ vector c = [1.0, 1.0, 0.0];
     (declaration (type_specifier) (identifier) (vector (float)))
     (declaration (type_specifier) (identifier) (vector (float) (float)))
     (declaration (type_specifier) (identifier) (vector (float) (float) (float))))
+
+
+=================
+while do
+=================
