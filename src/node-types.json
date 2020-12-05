@@ -303,6 +303,10 @@
           "named": true
         },
         {
+          "type": "const",
+          "named": true
+        },
+        {
           "type": "eq",
           "named": true
         },
@@ -578,6 +582,10 @@
       "required": true,
       "types": [
         {
+          "type": "const",
+          "named": true
+        },
+        {
           "type": "function_parameter_list",
           "named": true
         },
@@ -625,6 +633,10 @@
         },
         {
           "type": "assignment_operator",
+          "named": true
+        },
+        {
+          "type": "const",
           "named": true
         },
         {
@@ -1080,6 +1092,10 @@
       "required": true,
       "types": [
         {
+          "type": "const",
+          "named": true
+        },
+        {
           "type": "struct_declarator_list",
           "named": true
         },
@@ -1325,7 +1341,7 @@
   },
   {
     "type": "const",
-    "named": false
+    "named": true
   },
   {
     "type": "continue",

@@ -147,9 +147,11 @@ module.exports = grammar({
 
    // Type declarations
    _qualified_type_specifier: $ => choice(
-     seq('const', $.type_specifier),
+     seq($.const, $.type_specifier),
      $.type_specifier
    ),
+
+   const: $ => 'const',
 
    type_specifier: $ => choice(
      'command',

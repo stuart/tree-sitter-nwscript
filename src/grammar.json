@@ -934,8 +934,8 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "STRING",
-              "value": "const"
+              "type": "SYMBOL",
+              "name": "const"
             },
             {
               "type": "SYMBOL",
@@ -948,6 +948,10 @@
           "name": "type_specifier"
         }
       ]
+    },
+    "const": {
+      "type": "STRING",
+      "value": "const"
     },
     "type_specifier": {
       "type": "CHOICE",

@@ -41,9 +41,9 @@ void main(){
 }
 ---
  (source_file
-   (declaration (type_specifier) (identifier) (string_const))
-   (declaration (type_specifier) (identifier))
-   (declaration (type_specifier) (identifier) (float))
+   (declaration (const) (type_specifier) (identifier) (string_const))
+   (declaration (const) (type_specifier) (identifier))
+   (declaration (const) (type_specifier) (identifier) (float))
    (declaration (type_specifier) (identifier))
    (function_definition
      (function_declarator (type_specifier) (identifier))
@@ -254,5 +254,39 @@ vector c = [1.0, 1.0, 0.0];
 
 
 =================
-while do
+while loop
 =================
+int main() {
+
+ while(oItem != OBJECT_INVALID){
+   oItem = GetNextItem();
+ }
+
+}
+---
+(source_file
+  (function_definition
+    (function_declarator (type_specifier) (identifier))
+      (compound_statement
+        (statement_list
+          (statement
+            (iteration_statement
+              (while_start
+                (expression (identifier) (noteq) (object_invalid_const)))
+                  (statement
+                    (compound_statement
+                      (statement_list
+                        (statement
+                          (expression_statement
+                            (expression (identifier) (assignment_operator)
+                              (function_call (identifier))))))))))))))
+
+================
+const types
+================
+
+const float PI = 3.1415926;
+
+---
+(source_file
+  (declaration (const) (type_specifier) (identifier) (float)))
